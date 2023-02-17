@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            function addVote(num) {
+                return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+            }
+
+            console.log(addVote(0));
+
+            const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+            const squareList = (arr) => {
+                const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+                return squaredIntegers;
+            }
+
+
+            const squaredIntegers = squareList(realNumberArray);
+            console.log(squaredIntegers);
+
+
+            //template literals
+            const person = {
+                name: "Zodiac",
+                age: 56
+            }
+
+            const greeting = `Hello, my name is ${person.name}!
+            I am ${person.age} years old.`;
+
+            console.log(greeting);
+
+
+            //simple fields
+            const createPerson = (name, age, gender) => ( {name, age, gender});
+            console.log(createPerson("Zodiac", 56, "male"));
+
+
+            //class syntax
+            class SpaceShuttle {
+                constructor(targetPlanet) {
+                    this.targetPlanet = targetPlanet;
+                }
+            }
+
+            var zeus = new SpaceShuttle('Jupiter');
+
+            console.log(zeus.targetPlanet);
+             
+        </script>
+    </body>
+</html>
